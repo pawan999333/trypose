@@ -1,0 +1,93 @@
+.checkboxClass {
+  /* Hide the default checkbox */
+  opacity: 0;
+  position: absolute;
+  height: 0;
+  width: 0;
+}
+
+.checkboxClass + label {
+  position: relative;
+  padding-left: 40px; /* Adjust padding to fit the custom checkbox */
+  cursor: pointer;
+}
+
+.checkboxClass + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 24px; /* Set the height */
+  width: 24px; /* Set the width */
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 4px; /* Optional, for rounded corners */
+}
+
+.checkboxClass:checked + label:before {
+  background-color: #007bff; /* Change to your desired color */
+  border: none;
+}
+
+.checkboxClass:checked + label:after {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+}
+.parentDiv {
+  display: flex;
+  flex-direction: row;
+}
+.fullHeight{
+  height: 100vh;
+}
+/* @media(max-width: 426px){
+  .fullHeight{
+  height: auto;
+  }
+} */
+.signUpTitle{
+  font-size: 1.75rem;
+}
+.marginLeftCss{
+
+  margin-left: 1.5rem !important;
+}
+.inputCss{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+
+}
+@media (max-width: 426px) {
+  .rightDiv{
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .inputCss{
+    margin-left: 0rem;
+    margin-right: 0rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+  }
+  .marginLeftCss{
+
+    margin-left: 0.5rem !important;
+  }
+  .parentDiv {
+    flex-direction: column !important;
+  }
+  .signUpTitle{
+    font-size: 1.15rem;
+  }
+}
+
